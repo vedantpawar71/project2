@@ -1,0 +1,11 @@
+FROM node:22-alepine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+Expose 3000
+
+CMD ("npm","run","dev")
